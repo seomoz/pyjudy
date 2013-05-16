@@ -10,32 +10,7 @@ DEF MAXLINELEN = 100000
 
 cdef extern from "Judy.h":
     ctypedef void *   Pvoid_t
-#    ctypedef void ** PPvoid_t
-#    ctypedef const_void * Pcvoid_t
     ctypedef unsigned long    Word_t
-
-#    ctypedef enum JU_Errno_t:
-#        JU_ERRNO_NONE           = 0
-#        JU_ERRNO_FULL           = 1
-#        JU_ERRNO_NFMAX          = JU_ERRNO_FULL
-#        JU_ERRNO_NOMEM          = 2
-#        JU_ERRNO_NULLPPARRAY    = 3
-#        JU_ERRNO_NONNULLPARRAY  = 10
-#        JU_ERRNO_NULLPINDEX     = 4
-#        JU_ERRNO_NULLPVALUE     = 11   
-#        JU_ERRNO_NOTJUDY1       = 5
-#        JU_ERRNO_NOTJUDYL       = 6
-#        JU_ERRNO_NOTJUDYSL      = 7
-#        JU_ERRNO_UNSORTED       = 12
-#        JU_ERRNO_OVERRUN        = 8
-#        JU_ERRNO_CORRUPT        = 9
-#
-#    struct J_UDY_ERROR_STRUCT:
-#        JU_Errno_t je_Errno
-#        int        je_ErrID        
-#        Word_t     je_reserved[4]
-#    ctypedef J_UDY_ERROR_STRUCT JError_t
-#    ctypedef J_UDY_ERROR_STRUCT * PJError_t
 
     void JSLI( Word_t* PValue, Pvoid_t PJSLArray, uint8_t* Index)
     void JSLG( Word_t* PValue, Pvoid_t PJSLArray, uint8_t* Index)
