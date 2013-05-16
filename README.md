@@ -2,17 +2,17 @@
 Python bindings to libJudy
 ==========================
 
-[libJudy](TODO LINK HERE) is an efficient trie implementation in C.
+[libJudy](http://judy.sourceforge.net/) is an efficient trie implementation in C.
 Unfortunately of the existing three Python bindings, two do not work
 on 64 bit systems, and the third only implements integer arrays and sets.
 
 Our use case needs the JudySL implementation (string -> long), so
-we provide Cython bindings for it.  If the need arises we will add
+this provides Cython bindings for it.  If the need arises, we will add
 bindings to the other array types in the future based on the template
-for JudySL.  If you implement other bindings please let us know
+for JudySL.  If you implement them let us know
 and we will add them to this repository.
 
-This code is tested in Python 2.6/7 with Cython >0.17.
+This code is tested in Python 2.6/7 with Cython 0.17 and libJudy 1.0.5.
 
 Getting Started
 ===============
