@@ -24,6 +24,12 @@ class TestJudySL(unittest.TestCase):
         j[s.encode('utf-8')] = 88
         self.assertEqual(j[s.encode('utf-8')], 88)
 
+    def test_contains(self):
+        j = JudySL()
+        j['a'] = 5
+        self.assertTrue('a' in j)
+        self.assertFalse('b' in j)
+
     def test_errors(self):
         j = JudySL()
         self.assertRaises(KeyError, j.__getitem__, 'missing key')

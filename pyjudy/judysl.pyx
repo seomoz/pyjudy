@@ -47,6 +47,11 @@ cdef class JudySL(object):
         else:
             return v[0]
 
+    def __contains__(self, uint8_t* key):
+        cdef Word_t* v
+        JSLG(v, self._ptr, key)
+        return v != NULL
+
     def __delitem__(self, uint8_t* key):
         cdef int Rc_int
         JSLD(Rc_int, self._ptr, key)
